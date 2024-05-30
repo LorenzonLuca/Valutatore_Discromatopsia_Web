@@ -1,0 +1,12 @@
+flask
+Flask-SQLAlchemy
+pymysql
+psycopg2-binary
+cryptography
+Flask-RESTful
+python-dotenv
+Pillow
+flask-cors
+Flask-HTTPAuth
+itsdangerous==2.0.1
+apscheduler

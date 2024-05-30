@@ -1,0 +1,38 @@
+.content {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to bottom right, rgb(0, 255, 213), purple);
+}
+
+.formContainer {
+    background: #ddd;
+    border-radius: 25px;
+    padding: 12vh 12vh 0vh 12vh;
+    box-shadow: 5px 10px;
+    margin: 3vw;
+}
+
+.submitDiv {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: space-around;
+    align-items: baseline;
+    padding-top: 1vh;
+    margin-top: 1vh;
+}
+
+.noAccount {
+    padding-top: 2vh;
+    padding-bottom: 6vh;
+}
+
+.inputText {
+    box-shadow: 2px 4px;
+}
+
+.notificationError{
+    color: red;
+}

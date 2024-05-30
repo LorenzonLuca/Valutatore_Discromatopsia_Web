@@ -1,0 +1,61 @@
+.containerHistory{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-right: 5vw;
+    padding-left: 5vw;
+    padding-top: 2vh;
+    width: 100%;
+    height: fit-content;
+}
+.imgTitle{
+    width: 4vw;
+}
+.imgTitleMobile{
+    width: 15vw;
+}
+.historyValues{
+    width: 100%;
+    padding-right: 3vw;
+    padding-left: 3vw;
+    padding-top: 2vh;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:left;
+}
+
+.cardHistory{
+    width: 25%;
+}
+.cardHistory img{
+    width: 75%;
+}
+
+.cardHistoryMobile{
+    margin-top: 1vh;
+    width: 100%;
+}
+
+.cardHistoryMobile img{
+    width: 100%;
+}
+.loaderContainerHistory{
+    width: 100%;
+    padding-top: 1.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loaderContainerHistoryDynamic{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+}
+
+.removeContainer{
+    width: 100%;
+    margin: 1%;
+}

@@ -1,0 +1,29 @@
+FROM node:18-alpine as stage1
+
+WORKDIR /FE
+
+COPY package.json ./
+COPY package-lock.json ./
+
+RUN npm ci
+
+FROM stage1
+
+COPY --from=stage1 /FE /FE
+
+WORKDIR /FE
+
+COPY public/ ./public
+COPY src/ ./src
+
+CMD ["npm", "start"]
+
+
+## debug
+# FROM node:18-alpine
+
+# WORKDIR /GUI_web
+
+# ENV REACT_APP_SERVER_URL "http://localhost:5000"
+
+# CMD ["npm", "start"]

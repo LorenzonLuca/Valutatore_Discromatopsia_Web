@@ -1,0 +1,23 @@
+html{
+    background: #FBFAF5;
+}
+.layoutStyle{
+    background: #FBFAF5;
+    height: 100vh;
+}
+.contentStyle{
+    padding: 0 50px;
+}
+.title{
+    text-align: center;
+}
+.stackItem{
+    width: 100%;
+}
+
+.contentNotFound {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2vh;
+}

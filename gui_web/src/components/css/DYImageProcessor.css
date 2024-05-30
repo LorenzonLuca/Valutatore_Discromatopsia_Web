@@ -1,0 +1,72 @@
+.container{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-right: 5vw;
+    padding-left: 5vw;
+    padding-top: 2vh;
+    width: 100%;
+    height: fit-content;
+    object-fit: contain;  
+}
+.containerUploader{
+    /* height: auto; */
+    min-height: 25vh;
+    width: 100%;
+    object-fit: contain; 
+    display: flex;
+    text-align: center;
+    align-items:center;
+    justify-content: center;
+}
+.imageUpload{
+    width: 25vw;
+    object-fit: contain;  
+}
+
+.uploader{
+    width: 75%;
+    float: left;
+    height: auto;
+    object-fit: contain;
+}
+.selector{
+    width: 24%;
+    float: right;
+    text-align: left;
+    height: 25%;
+}
+.loaderContainer{
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+.buttonInfo{
+    margin-top: 2vh;
+    width: 100%;
+}
+.resetButton{
+    width: 100%;
+    margin-top: 1vh;
+}
+.sendButton{
+    margin-top: 2vh;
+    width: 100%;
+    font-size: 150%;
+    height: auto;
+}
+
+.sendButtonMobile{
+    margin-top: 2vh;
+    font-size: 150%;
+    height: auto;
+}
+
+
+/* ------- override antd css class ------- */
+.ant-checkbox-group {
+    display: flex;
+    flex-direction: column;
+}

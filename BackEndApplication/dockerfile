@@ -1,0 +1,19 @@
+FROM python:3.10-alpine as stage1
+
+WORKDIR /BE
+
+COPY requirements.txt requirements.txt
+RUN pip3 install -r requirements.txt
+
+RUN rm requirements.txt
+
+FROM stage1
+
+COPY --from=stage1 /usr/local/lib/python3.10/site-packages /usr/local/lib/python3.10/site-packages
+
+WORKDIR /BE
+COPY . .
+
+EXPOSE 5000
+
+CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]

@@ -1,0 +1,27 @@
+.headerStyle{
+    position: sticky;
+    top: 0;
+    z-index:  1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: #FBFAF5;
+    justify-content: space-between;
+}
+.button{
+    margin: 5;
+}
+img{
+    width: 50px;
+    height: auto;
+}
+
+.exitButton{
+    padding-left: 1vw;
+}
+
+.account{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:left;
+}

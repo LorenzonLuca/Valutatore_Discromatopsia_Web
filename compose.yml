@@ -1,0 +1,53 @@
+version: '3'
+services:
+  backend:
+    container_name: discro-be-flask
+    build: ./BackEndApplication
+    links:
+      - db
+    ports: 
+    - "5000:5000"
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_CONNECTION_STRING: mysql+pymysql://root:root@db:3306/images
+      TOKEN_ENCRYPTION: chiave_segreta_per_token
+      PYTHONUNBUFFERED: 1
+    volumes:
+      - type: bind
+        source: ./BackEndApplication
+        target: /BE
+
+  db:
+    container_name: discro-db-mysql
+    image: mysql:8.0.21
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: images
+    cap_add:
+      - SYS_NICE
+    healthcheck:
+      test: ["CMD", "mysqladmin","ping", "-h", "localhost"]
+      timeout: 3s
+      retries: 10
+    volumes:
+      - type: bind
+        source: ./db
+        target: /var/lib/mysql
+
+  guiweb:
+    container_name: discro-fe-react
+    build: ./gui_web
+    ports: 
+      - "3000:3000"
+    environment:
+      REACT_APP_SERVER_URL: http://localhost:5000
+    depends_on:
+      - backend
+    volumes:
+      - type: bind
+        source: ./gui_web
+        target: /GUI_web
